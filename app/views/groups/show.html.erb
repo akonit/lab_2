@@ -1,0 +1,127 @@
+<p>
+  <h1>Группа <%= @group.name%></h1>
+  <strong>Курс:</strong>
+  <%= @group.cource %><br>
+</p>
+
+<strong>Расписание:</strong>&nbsp;&nbsp;
+<%= link_to 'Редактировать', edit_group_path(@group) %>&nbsp;&nbsp;
+<%= link_to 'Добавить пару', new_lesson_path(:group_id => @group.id)%><br><br>
+ 
+<strong>Понедельник:</strong><br>
+<% @group.lessons.each do |lesson| %> 
+    <% if lesson.day == 1 %>
+        &nbsp;&nbsp;
+	    <tr>
+	      <td><%= lesson.name %></td>
+	      <td><%= lesson.teacher %></td>
+	      <td><%= lesson.start %></td>
+	      <td><%= lesson.end %></td>
+	      <td><%= @days[lesson.day - 1] %></td>
+	      <td><%= link_to 'Просмотреть', lesson_path(lesson) %></td>
+	      <td><%= link_to 'Редактировать', edit_lesson_path(lesson) %></td>
+	      <td><%= link_to 'Удалить', lesson_path(lesson),
+	                    method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+	    </tr>
+        <br>
+    <% end %> 
+<% end %>
+
+<strong>Вторник:</strong><br>
+<% @group.lessons.each do |lesson| %> 
+    <% if lesson.day == 2 %>
+        &nbsp;&nbsp;
+	    <tr>
+	      <td><%= lesson.name %></td>
+	      <td><%= lesson.teacher %></td>
+	      <td><%= lesson.start %></td>
+	      <td><%= lesson.end %></td>
+	      <td><%= @days[lesson.day - 1] %></td>
+	      <td><%= link_to 'Просмотреть', lesson_path(lesson) %></td>
+	      <td><%= link_to 'Редактировать', edit_lesson_path(lesson) %></td>
+	      <td><%= link_to 'Удалить', lesson_path(lesson),
+	                    method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+	    </tr>
+        <br>
+    <% end %>
+<% end %>
+
+<strong>Среда:</strong><br>
+<% @group.lessons.each do |lesson| %> 
+    <% if lesson.day == 3 %>
+        &nbsp;&nbsp;
+	    <tr>
+	      <td><%= lesson.name %></td>
+	      <td><%= lesson.teacher %></td>
+	      <td><%= lesson.start %></td>
+	      <td><%= lesson.end %></td>
+	      <td><%= @days[lesson.day - 1] %></td>
+	      <td><%= link_to 'Просмотреть', lesson_path(lesson) %></td>
+	      <td><%= link_to 'Редактировать', edit_lesson_path(lesson) %></td>
+	      <td><%= link_to 'Удалить', lesson_path(lesson),
+	                    method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+	    </tr>
+        <br>
+    <% end %>
+<% end %>
+
+<strong>Четверг:</strong><br>
+<% @group.lessons.each do |lesson| %> 
+    <% if lesson.day == 4 %>
+        &nbsp;&nbsp;
+	    <tr>
+	      <td><%= lesson.name %></td>
+	      <td><%= lesson.teacher %></td>
+	      <td><%= lesson.start %></td>
+	      <td><%= lesson.end %></td>
+	      <td><%= @days[lesson.day - 1] %></td>
+	      <td><%= link_to 'Просмотреть', lesson_path(lesson) %></td>
+	      <td><%= link_to 'Редактировать', edit_lesson_path(lesson) %></td>
+	      <td><%= link_to 'Удалить', lesson_path(lesson),
+	                    method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+	    </tr>
+        <br>
+    <% end %>
+<% end %>
+
+<strong>Пятница:</strong><br>
+<% @group.lessons.each do |lesson| %> 
+    <% if lesson.day == 5 %>
+        &nbsp;&nbsp;
+	    <tr>
+	      <td><%= lesson.name %></td>
+	      <td><%= lesson.teacher %></td>
+	      <td><%= lesson.start %></td>
+	      <td><%= lesson.end %></td>
+	      <td><%= @days[lesson.day - 1] %></td>
+	      <td><%= link_to 'Просмотреть', lesson_path(lesson) %></td>
+	      <td><%= link_to 'Редактировать', edit_lesson_path(lesson) %></td>
+	      <td><%= link_to 'Удалить', lesson_path(lesson),
+	                    method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+	    </tr>
+        <br>
+    <% end %>
+<% end %>
+
+<strong>Суббота:</strong><br>
+<% @group.lessons.each do |lesson| %> 
+    <% if lesson.day == 6 %>
+        &nbsp;&nbsp;
+	    <tr>
+	      <td><%= lesson.name %></td>
+	      <td><%= lesson.teacher %></td>
+	      <td><%= lesson.start %></td>
+	      <td><%= lesson.end %></td>
+	      <td><%= @days[lesson.day - 1] %></td>
+	      <td><%= link_to 'Просмотреть', lesson_path(lesson) %></td>
+	      <td><%= link_to 'Редактировать', edit_lesson_path(lesson) %></td>
+	      <td><%= link_to 'Удалить', lesson_path(lesson),
+	                    method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+	    </tr>
+        <br>
+    <% end %>
+<% end %>
+<br>
+<br>
+
+<%= link_to 'Вернуться к факультету', faculty_path(@faculty) %>

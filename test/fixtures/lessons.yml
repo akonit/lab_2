@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  teacher: MyText
+  day: 1
+  start: MyText
+  end: MyText
+  group_id: 
+
+two:
+  name: MyText
+  teacher: MyText
+  day: 1
+  start: MyText
+  end: MyText
+  group_id: 

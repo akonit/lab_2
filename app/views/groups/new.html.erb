@@ -1,0 +1,21 @@
+<h1>Добавить группу</h1>
+
+<%= form_for :group, url: groups_path do |f| %>
+  <p>
+    <%= f.label :курс %><br>
+    <%= f.text_field :cource %>
+  </p>
+ 
+  <p>
+    <%= f.label :название %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <%= f.hidden_field :faculty_id, :value => @faculty.id%>
+ 
+  <p>
+    <%= f.submit :сохранить%>
+  </p>
+<% end %>
+
+<%= link_to 'Назад', faculty_path(@faculty) %>

@@ -1,0 +1,2 @@
+DROP DATABASE SCHEDULE;
+DROP USER 'lab2'@localhost;
